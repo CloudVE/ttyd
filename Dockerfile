@@ -1,5 +1,5 @@
 FROM tsl0922/musl-cross
-RUN git clone --depth=1 https://github.com/tsl0922/ttyd.git /ttyd \
+RUN git clone --depth=1 https://github.com/CloudVE/ttyd.git /ttyd \
     && cd /ttyd && ./scripts/cross-build.sh x86_64
 
 FROM ubuntu:18.04
