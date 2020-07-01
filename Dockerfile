@@ -9,6 +9,7 @@ ADD https://github.com/krallin/tini/releases/download/v0.18.0/tini /sbin/tini
 RUN chmod +x /sbin/tini; \
     apt-get -qq update && apt-get install -y --no-install-recommends \
         apt-transport-https \
+        ca-certificates \
         vim \
         git \
         wget \
