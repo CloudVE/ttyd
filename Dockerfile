@@ -17,7 +17,7 @@ RUN chmod +x /sbin/tini; \
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh --no-check-certificate && \
     bash ./miniconda.sh -b -p /usr/bin/miniconda && \
     rm ./miniconda.sh && \
-    /usr/bin/miniconda/bin/conda init bash &&
+    /usr/bin/miniconda/bin/conda init bash && \
     pip install bioblend
 
 EXPOSE 7681
