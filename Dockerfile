@@ -13,11 +13,15 @@ RUN chmod +x /sbin/tini; \
         vim \
         git \
         wget \
+        unzip \
         curl; \
     wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh --no-check-certificate && \
     bash ./miniconda.sh -b -p /usr/bin/miniconda && \
     rm ./miniconda.sh && \
-    /usr/bin/miniconda/bin/conda init bash
+    /usr/bin/miniconda/bin/conda init bash && \
+    wget https://github.com/uc-cdis/cdis-data-client/releases/download/2020.07/dataclient_linux.zip -O gen3client.zip --no-check-certificate && \
+    unzip gen3client.zip && mv gen3-client /usr/local/bin && \
+    pip install bioblend
 
 EXPOSE 7681
 
